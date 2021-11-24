@@ -15,10 +15,17 @@ class RadioTest {
     }
 
     @Test
-    void shouldSetInvalidStation() {
+    void shouldSetInvalidStationUpperBound() {
         radio.setCurrentRadioStation(5);
         radio.setCurrentRadioStation(12);
         assertEquals(5, radio.getCurrentRadioStation());
+    }
+
+    @Test
+    void shouldSetInvalidStationLowerBound() {
+        radio.setCurrentRadioStation(4);
+        radio.setCurrentRadioStation(-2);
+        assertEquals(4, radio.getCurrentRadioStation());
     }
 
     @Test
