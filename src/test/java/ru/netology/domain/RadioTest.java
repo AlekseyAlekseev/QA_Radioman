@@ -36,6 +36,20 @@ class RadioTest {
     }
 
     @Test
+    void shouldNextStationMaxBound() {
+        radio.setCurrentRadioStation(8);
+        radio.nextStation();
+        assertEquals(9, radio.getCurrentRadioStation());
+    }
+
+    @Test
+    void shouldPrevStationMinBound() {
+        radio.setCurrentRadioStation(1);
+        radio.prevStation();
+        assertEquals(0, radio.getCurrentRadioStation());
+    }
+
+    @Test
     void shouldPrevStation() {
         radio.setCurrentRadioStation(3);
         radio.prevStation();
