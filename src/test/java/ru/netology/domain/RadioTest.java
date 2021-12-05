@@ -90,7 +90,7 @@ class RadioTest {
 
     @Test
     void shouldNextStationUpperBound() {
-        radio.setCurrentRadioStation(10);
+        radio.setCurrentRadioStation(9);
         radio.nextStation();
         assertEquals(0, radio.getCurrentRadioStation());
     }
@@ -99,7 +99,7 @@ class RadioTest {
     void shouldPrevStationLowerBound() {
         radio.setCurrentRadioStation(0);
         radio.prevStation();
-        assertEquals(10, radio.getCurrentRadioStation());
+        assertEquals(9, radio.getCurrentRadioStation());
     }
 
     @Test
@@ -118,9 +118,9 @@ class RadioTest {
 
     @Test
     void shouldIncreaseVolumeUpperBound() {
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
         radio.increaseVolume();
-        assertEquals(10, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
     @Test

@@ -25,7 +25,7 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentRadioStation < countRadioStation) {
+        if (currentRadioStation < countRadioStation--) {
             currentRadioStation++;
         } else {
             currentRadioStation = 0;
@@ -41,14 +41,14 @@ public class Radio {
     }
 
     public void increaseVolume() {
-        if (currentVolume < 10) {
-            currentVolume = currentVolume + 1;
+        if (currentVolume < 100) {
+            currentVolume++;
         }
     }
 
     public void turnDownVolume() {
         if (currentVolume > 0) {
-            currentVolume = currentVolume - 1;
+            currentVolume--;
         }
     }
 
@@ -68,7 +68,7 @@ public class Radio {
         if (currentRadioStation < 0) {
             return;
         }
-        if (currentRadioStation > countRadioStation) {
+        if (currentRadioStation > countRadioStation--) {
             return;
         }
         this.currentRadioStation = currentRadioStation;
