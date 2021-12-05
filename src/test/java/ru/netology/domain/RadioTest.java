@@ -10,8 +10,8 @@ class RadioTest {
 
     @Test
     void shouldSetCountRadioStation() {
-        radio.setCountRadioStation(15);
-        assertEquals(15, radio.getCountRadioStation());
+        radio.setCountRadioStation(16);
+        assertEquals(16, radio.getCountRadioStation());
     }
 
     @Test
