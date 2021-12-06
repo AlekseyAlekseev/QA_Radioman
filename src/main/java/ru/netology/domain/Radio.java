@@ -25,7 +25,7 @@ public class Radio {
     }
 
     public void nextStation() {
-        if (currentRadioStation < countRadioStation--) {
+        if (currentRadioStation < countRadioStation - 1) {
             currentRadioStation++;
         } else {
             currentRadioStation = 0;
@@ -68,7 +68,7 @@ public class Radio {
         if (currentRadioStation < 0) {
             return;
         }
-        if (currentRadioStation > countRadioStation--) {
+        if (currentRadioStation > countRadioStation - 1) {
             return;
         }
         this.currentRadioStation = currentRadioStation;
