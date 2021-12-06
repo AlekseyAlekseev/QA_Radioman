@@ -9,6 +9,38 @@ class RadioTest {
     Radio radio = new Radio();
 
     @Test
+    void shouldSetCountRadioStation() {
+        radio.setCountRadioStation(16);
+        assertEquals(16, radio.getCountRadioStation());
+    }
+
+    @Test
+    void shouldCreateRadio() {
+        Radio radio = new Radio(27);
+        assertEquals(27, radio.getCountRadioStation());
+    }
+
+
+    @Test
+    void shouldSetValidRadioStation() {
+        radio.setStation(7);
+        assertEquals(7, radio.getCurrentRadioStation());
+    }
+
+    @Test
+    void shouldSetInvalidRadioStation() {
+        radio.setStation(-5);
+        assertEquals(0, radio.getCurrentRadioStation());
+    }
+
+    @Test
+    void shouldSetRadioStation() {
+        radio.setStation(0);
+        assertEquals(0, radio.getCurrentRadioStation());
+    }
+
+
+    @Test
     void shouldSetStation() {
         radio.setCurrentRadioStation(4);
         assertEquals(4, radio.getCurrentRadioStation());
@@ -86,9 +118,9 @@ class RadioTest {
 
     @Test
     void shouldIncreaseVolumeUpperBound() {
-        radio.setCurrentVolume(10);
+        radio.setCurrentVolume(100);
         radio.increaseVolume();
-        assertEquals(10, radio.getCurrentVolume());
+        assertEquals(100, radio.getCurrentVolume());
     }
 
     @Test
